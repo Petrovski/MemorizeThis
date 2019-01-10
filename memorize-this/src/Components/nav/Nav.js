@@ -1,10 +1,12 @@
-import React from "react";
+import React, { Component } from "react";
+import "./nav.css"
 
-class Nav extends React.Component {
+class Nav extends Component {
     
     render() {
         return (
             <div>
+                <nav className="navbar navbar-dark bg-dark">
                     <ul className="nav justify-content-center">
                         <li className="nav-item">
                             <a className="nav-link active" href="www.google.com">Active</a>
@@ -12,13 +14,14 @@ class Nav extends React.Component {
                         <li className="nav-item">
                             <a className="nav-link" href="www.google.com">Link</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="www.google.com">Link</a>
+                        <li className="nav-item">
+                            <a className="nav-link" href="www.google.com">Link</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link disabled" href="www.google.com">Disabled</a>
+                        <li className="nav-item">
+                            <a className="nav-link disabled" href="www.google.com">Disabled</a>
                         </li>
                     </ul>
+                </nav>
             </div>
         );
     }
