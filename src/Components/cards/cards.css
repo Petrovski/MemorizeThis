@@ -1,4 +1,10 @@
 img.img-thumbnail {
   margin: 20px;
-  height: 200px;
+  height: 230px;
+}
+
+img.img-thumbnail:hover {
+  border: 1px solid black;
+  transition: 0.5s;
+  box-shadow: 10px 10px 5px gray;
 }

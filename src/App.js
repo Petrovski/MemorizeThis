@@ -18,6 +18,14 @@ class App extends Component {
   hero = { array: heroes }
 
 
+  checkClicked = (id, clicked) => {
+    if (clicked === "true") {
+      this.userScore = 0;
+      console.log();
+
+    }
+  }
+
   // Fisher-Yates Shuffle Algo
   shuffle = array => {
   var m = array.length, t, i;

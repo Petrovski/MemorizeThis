@@ -6,7 +6,7 @@ class Cards extends Component {
     render() {
 
         return (
-            <div classname="herodiv">
+            <div>
                 <img className="img-thumbnail"
                     src={this.props.image}
                     alt={this.props.name}
