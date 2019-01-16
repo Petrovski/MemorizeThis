@@ -8,17 +8,19 @@ import './App.css';
 
 class App extends Component {
 
-  handleClick = id => {
-    console.log("this was clicked!!!" + id);
-    this.setState({
-      currentScore: this.state.currentScore + 1
-    })
-  }
-
   state = {
     currentScore: 0,
     topScore: 0,
     heroes
+  }
+
+  handleClick = id => {
+    console.log("Image ID #" + id + " was clicked!");
+    this.setState({
+      currentScore: this.state.currentScore + 1,
+      topScore: this.state.topScore + 1,
+      clicked: this.state.clicked === "true"
+    })
   }
 
   render() {
