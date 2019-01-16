@@ -7,8 +7,8 @@ class Jumbotron extends Component {
         return (
             <div className="jumbotron jumbotron-fluid" id="jumbo">{this.props.children}
                 <div className="container-fluid">
-                    <h1 className="display-4">Fluid jumbotron</h1>
-                    <p className="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+                    <h1 className="display-3">Overwatch Heroes Memory Game</h1>
+                    <p className="lead">Click an Ovewatch hero image to start the game. Memorize who you clicked, as you don't want to click them again!</p>
                 </div>
             </div>
         );

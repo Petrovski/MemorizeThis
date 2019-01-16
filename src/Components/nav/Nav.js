@@ -9,16 +9,10 @@ class Nav extends Component {
                 <nav className="navbar navbar-dark bg-dark">
                     <ul className="nav justify-content-center">
                         <li className="nav-item">
-                            <a className="nav-link active" href="www.google.com">Active</a>
+                            Current Score: 0
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="www.google.com">Link</a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link" href="www.google.com">Link</a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link disabled" href="www.google.com">Disabled</a>
+                            Top Score: 0
                         </li>
                     </ul>
                 </nav>

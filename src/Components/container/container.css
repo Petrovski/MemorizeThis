@@ -2,8 +2,16 @@ p {
     font-size: 30px;
 }
 
-main {
+#heroescontainer {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50px;
+    justify-content: center;
+    width: 90%;
+}
+
+/* main {
     background-image: url("./overwatch-background.jpg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
-}
+} */
