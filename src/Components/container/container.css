@@ -1,0 +1,9 @@
+p {
+    font-size: 30px;
+}
+
+main {
+    background-image: url("./overwatch-background.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
