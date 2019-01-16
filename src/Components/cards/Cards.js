@@ -1,27 +1,18 @@
-import React, { Component } from "react";
+import React from "react";
 import "./cards.css";
 
-class Cards extends Component {
-
-    handleClick = event => {
-        event.preventDefault();
-        console.log("img was clicked!!!!")
-    }
-
-    render() {
+const Cards = props => {
 
         return (
-            <div>
+            <div onClick={ () => props.handleClick(props.id) }>
                 <img className="img-thumbnail"
-                    id={this.props.id}
-                    src={this.props.image}
-                    alt={this.props.name}
-                    clicked={this.props.clicked}
-                    onClick={this.handleClick}
+                    id={props.id}
+                    src={props.image}
+                    alt={props.name}
+                    clicked="false"
                 />
             </div>
         )
     }
-}
 
 export default Cards;

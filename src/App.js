@@ -8,56 +8,35 @@ import './App.css';
 
 class App extends Component {
 
-  // Starting scores to update later
-  score = {
-    userScore: 0,
-    topScore: 0
+  handleClick = id => {
+    console.log("this was clicked!!!" + id);
+    this.setState({
+      currentScore: this.state.currentScore + 1
+    })
   }
 
-  hero = { array: heroes }
-
-
-  checkClicked = (id, clicked) => {
-    if (clicked === "true") {
-      this.score.userScore = 0;
-      console.log(this.score.userScore);
-
-    }
+  state = {
+    currentScore: 0,
+    topScore: 0,
+    heroes
   }
-
-
-  // Fisher-Yates Shuffle Algo
-  shuffle = array => {
-  var m = array.length, t, i;
-
-  // While there remain elements to shuffle…
-  while (m) {
-
-    // Pick a remaining element…
-    i = Math.floor(Math.random() * m--);
-
-    // And swap it with the current element.
-    t = array[m];
-    array[m] = array[i];
-    array[i] = t;
-  }
-
-  return array;
-}
 
   render() {
     return (
       <div className="App">
-        <Nav />
+        <Nav 
+          currentScore={this.state.currentScore}
+          topScore={this.state.topScore}
+        />
         <Jumbotron />
         <Container>
-          {this.hero.array.map((hero, key) => (
+          {this.state.heroes.map( hero => (
             <Cards 
               id={hero.id}
               image={hero.image}
-              clicked={hero.clicked}
               name={hero.name}
-              key={key}
+              key={hero.id}
+              handleClick={this.handleClick}
             />
           ))}
         </Container>

@@ -1,24 +1,23 @@
-import React, { Component } from "react";
+import React from "react";
 import "./nav.css"
 
-class Nav extends Component {
+const Nav = props => {
     
-    render() {
         return (
             <div>
                 <nav className="navbar navbar-dark bg-dark">
                     <ul className="nav justify-content-center">
                         <li className="nav-item">
-                            Current Score: 0
+                            Current Score: <strong id="scores"> {props.currentScore} </strong>
                         </li>
                         <li className="nav-item">
-                            Top Score: 0
+                            Top Score: <strong id="scores"> {props.topScore} </strong>
                         </li>
                     </ul>
                 </nav>
             </div>
         );
     }
-}
+
 
 export default Nav;
