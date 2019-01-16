@@ -8,7 +8,6 @@ import './App.css';
 
 class App extends Component {
 
-
   // Starting scores to update later
   score = {
     userScore: 0,
@@ -20,11 +19,12 @@ class App extends Component {
 
   checkClicked = (id, clicked) => {
     if (clicked === "true") {
-      this.userScore = 0;
-      console.log();
+      this.score.userScore = 0;
+      console.log(this.score.userScore);
 
     }
   }
+
 
   // Fisher-Yates Shuffle Algo
   shuffle = array => {
