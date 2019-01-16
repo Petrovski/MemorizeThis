@@ -14,14 +14,36 @@ class App extends Component {
     heroes
   }
 
+  // Click event to handle heroes state and shuffling
   handleClick = id => {
     console.log("Image ID #" + id + " was clicked!");
     this.setState({
       currentScore: this.state.currentScore + 1,
       topScore: this.state.topScore + 1,
-      clicked: this.state.clicked === "true"
+      clicked: this.state.clicked === "true",
+      heroes: this.shuffle(heroes)
     })
   }
+
+
+  // Fisher-Yaes Shuffle Algo for JS
+  shuffle = array => {
+  var m = array.length, t, i;
+
+  // While there remain elements to shuffle…
+  while (m) {
+
+    // Pick a remaining element…
+    i = Math.floor(Math.random() * m--);
+
+    // And swap it with the current element.
+    t = array[m];
+    array[m] = array[i];
+    array[i] = t;
+  }
+
+  return array;
+}
 
   render() {
     return (
@@ -39,6 +61,7 @@ class App extends Component {
               name={hero.name}
               key={hero.id}
               handleClick={this.handleClick}
+              shuffle={this.shuffle}
             />
           ))}
         </Container>
