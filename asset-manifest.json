@@ -1,14 +1,14 @@
 {
-  "main.css": "/MemorizeThis/static/css/main.e02f0211.chunk.css",
-  "main.js": "/MemorizeThis/static/js/main.e95c4678.chunk.js",
-  "main.js.map": "/MemorizeThis/static/js/main.e95c4678.chunk.js.map",
+  "main.css": "/MemorizeThis/static/css/main.291c5f12.chunk.css",
+  "main.js": "/MemorizeThis/static/js/main.6f755e50.chunk.js",
+  "main.js.map": "/MemorizeThis/static/js/main.6f755e50.chunk.js.map",
   "static/js/1.35d49673.chunk.js": "/MemorizeThis/static/js/1.35d49673.chunk.js",
   "static/js/1.35d49673.chunk.js.map": "/MemorizeThis/static/js/1.35d49673.chunk.js.map",
   "runtime~main.js": "/MemorizeThis/static/js/runtime~main.54462bf7.js",
   "runtime~main.js.map": "/MemorizeThis/static/js/runtime~main.54462bf7.js.map",
   "static/media/jumbotron.css": "/MemorizeThis/static/media/overwatch-background.89e2fa78.jpg",
-  "static/css/main.e02f0211.chunk.css.map": "/MemorizeThis/static/css/main.e02f0211.chunk.css.map",
+  "static/css/main.291c5f12.chunk.css.map": "/MemorizeThis/static/css/main.291c5f12.chunk.css.map",
   "index.html": "/MemorizeThis/index.html",
-  "precache-manifest.2cd8c442d727df3a9c95b5fdf58a71fe.js": "/MemorizeThis/precache-manifest.2cd8c442d727df3a9c95b5fdf58a71fe.js",
+  "precache-manifest.41aba2ef522c988a8d261a9f6c54f33f.js": "/MemorizeThis/precache-manifest.41aba2ef522c988a8d261a9f6c54f33f.js",
   "service-worker.js": "/MemorizeThis/service-worker.js"
 }
