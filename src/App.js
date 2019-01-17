@@ -17,6 +17,7 @@ class App extends Component {
   // Click event to handle heroes state and shuffling
   handleClick = id => {
     console.log("Image ID #" + id + " was clicked!");
+    heroes.clicked = "true"
     this.setState({
       currentScore: this.state.currentScore + 1,
       topScore: this.state.topScore + 1,
@@ -48,11 +49,12 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Nav 
+
+        <Jumbotron />
+        <Nav
           currentScore={this.state.currentScore}
           topScore={this.state.topScore}
         />
-        <Jumbotron />
         <Container>
           {this.state.heroes.map( hero => (
             <Cards 

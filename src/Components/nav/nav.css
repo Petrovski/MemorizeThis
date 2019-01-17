@@ -1,6 +1,6 @@
 li {
-    font-size: 30px;
-    color: white;
+    font-size: 40px;
+    color: black;
     margin: 0px 20px 0px 20px;
 }
 
@@ -8,6 +8,17 @@ ul {
     margin: 0 auto;
 }
 
+#scoresnav {
+    background: white;
+}
+
 #scores {
     text-decoration: underline;
+}
+
+hr {
+    width: 80%;
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
 }

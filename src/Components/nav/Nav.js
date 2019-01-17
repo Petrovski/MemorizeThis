@@ -5,7 +5,7 @@ const Nav = props => {
     
         return (
             <div>
-                <nav className="navbar navbar-dark bg-dark">
+                <nav className="navbar" id="scoresnav">
                     <ul className="nav justify-content-center">
                         <li className="nav-item">
                             Current Score: <strong id="scores"> {props.currentScore} </strong>
@@ -15,6 +15,7 @@ const Nav = props => {
                         </li>
                     </ul>
                 </nav>
+                <hr></hr>
             </div>
         );
     }
