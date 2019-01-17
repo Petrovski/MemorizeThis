@@ -8,6 +8,23 @@ p {
     background-size: 100% 100%;
 }
 
-.display-4 {
-    font-size: 80px;
+#gameinfo.lead {
+    font-size: 30px;
+}
+
+.jumbotron {
+    padding: 2rem;
+}
+
+.lead {
+    font-size: 25px;
+}
+
+#me.lead {
+    padding-top: 30px;
+}
+
+.display-3 {
+    font-size: 70px;
+    font-weight: bold;
 }

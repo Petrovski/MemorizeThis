@@ -15,13 +15,19 @@ class App extends Component {
   }
 
   // Click event to handle heroes state and shuffling
-  handleClick = id => {
+  handleClick = (id, clicked) => {
     console.log("Image ID #" + id + " was clicked!");
-    heroes.clicked = "true"
+    if (clicked === "true") {
+      // console.log(clicked)
+    } else if (clicked === "false") {
+      this.setState({
+        heroes: this.state.heroes === "true"
+      }) 
+      console.log(clicked)
+    }
     this.setState({
       currentScore: this.state.currentScore + 1,
       topScore: this.state.topScore + 1,
-      clicked: this.state.clicked === "true",
       heroes: this.shuffle(heroes)
     })
   }
@@ -49,7 +55,6 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-
         <Jumbotron />
         <Nav
           currentScore={this.state.currentScore}
@@ -64,6 +69,7 @@ class App extends Component {
               key={hero.id}
               handleClick={this.handleClick}
               shuffle={this.shuffle}
+              clicked={hero.clicked}
             />
           ))}
         </Container>
