@@ -11,7 +11,7 @@ class App extends Component {
   state = {
     currentScore: 0,
     topScore: 0,
-    heroes
+    heroes  
   }
 
   // Click event to handle heroes state and shuffling
@@ -36,6 +36,7 @@ class App extends Component {
   // Fisher-Yaes Shuffle Algo for JS
   shuffle = array => {
   var m = array.length, t, i;
+  
 
   // While there remain elements to shuffle…
   while (m) {
