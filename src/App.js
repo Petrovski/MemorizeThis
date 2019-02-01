@@ -14,22 +14,36 @@ class App extends Component {
     heroes
   }
 
+
   // Click event to handle heroes state and shuffling
   handleClick = (id, clicked) => {
+ 
     console.log("Image ID #" + id + " was clicked!");
+    
     if (clicked === "true") {
-      // console.log(clicked)
+      console.log("this is now true!!!")
     } else if (clicked === "false") {
+      console.log("this is false")
+      let tempArray = JSON.parse(JSON.stringify(this.state.heroes));
+
+      for(let i=0;i<tempArray.length;i++){
+        if(tempArray[i].id === id){
+          console.log("we found a matching ID!!!")
+          tempArray[i].clicked = "true";
+          console.log(tempArray[i]);
+        }
+      }
+
+      console.log("This is the new array:", tempArray)
+
       this.setState({
-        heroes: this.state.heroes === "true"
-      }) 
+        currentScore: this.state.currentScore + 1,
+        topScore: this.state.topScore + 1,
+        heroes: this.shuffle(tempArray)
+      })
       console.log(clicked)
     }
-    this.setState({
-      currentScore: this.state.currentScore + 1,
-      topScore: this.state.topScore + 1,
-      heroes: this.shuffle(heroes)
-    })
+    
   }
 
 
@@ -37,7 +51,6 @@ class App extends Component {
   shuffle = array => {
   var m = array.length, t, i;
   
-
   // While there remain elements to shuffle…
   while (m) {
 
@@ -68,7 +81,7 @@ class App extends Component {
               image={hero.image}
               name={hero.name}
               key={hero.id}
-              handleClick={this.handleClick}
+              handleClick={() => this.handleClick(hero.id, hero.clicked)}
               shuffle={this.shuffle}
               clicked={hero.clicked}
             />
@@ -77,6 +90,7 @@ class App extends Component {
       </div>
     );
   }
+
 }
 
 export default App;
