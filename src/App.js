@@ -11,7 +11,7 @@ class App extends Component {
   state = {
     currentScore: 0,
     topScore: 0,
-    heroes  
+    heroes
   }
 
   // Click event to handle heroes state and shuffling
